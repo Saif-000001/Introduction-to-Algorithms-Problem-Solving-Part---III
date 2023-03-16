@@ -1,3 +1,7 @@
+/*
+    Time Complexity -> O(N^2 + E).
+    Space Complexity -> O(N^2).
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -42,8 +46,6 @@ int main()
     DFS(0);
     cout << "\n";
 
-    for(int i = 0; i<nodes; i++){
-        cout<<i <<"-> "<<visited[i]<<"\n";
-    }
+  
     return 0;
 }
