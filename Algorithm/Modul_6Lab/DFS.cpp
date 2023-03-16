@@ -32,9 +32,23 @@ int main()
         adj_list[u].push_back(v);
         adj_list[v].push_back(u);
     }
+    cout << "Adjecency List : \n";
+    for (int i = 0; i < node; i++)
+    {
+        cout << i << "-> ";
+        for (auto list : adj_list[i])
+        {
+            cout << list << " ";
+        }
+        cout << "\n";
+    }
 
+    cout << "DFS Adjecency List : \n";
     int src = 0;
     DFS(src);
+    cout << "\n";
+
+
     return 0;
 }
 
