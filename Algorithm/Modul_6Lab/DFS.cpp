@@ -44,8 +44,8 @@ int main()
     }
 
     cout << "DFS Adjecency List : \n";
-    int src = 0;
-    DFS(src);
+    // int src = 0;
+    DFS(2);
     cout << "\n";
 
 

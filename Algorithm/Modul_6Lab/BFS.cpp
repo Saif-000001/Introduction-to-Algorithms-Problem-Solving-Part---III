@@ -41,7 +41,7 @@ int main()
         adj_list[v].push_back(u);
     }
 
-    int src = 0;
-    BFS(src);
+    // int src = 0;
+    BFS(2);
     return 0;
 }

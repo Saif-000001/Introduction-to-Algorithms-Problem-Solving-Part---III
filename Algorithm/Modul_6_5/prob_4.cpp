@@ -8,6 +8,7 @@ int checked[N];
 
 void DFS(int node)
 {
+    cout << node << " ";
     visited[node] = 1;
     for (auto child : adj_list[node])
     {
@@ -39,8 +40,8 @@ int main()
         cout << "\n";
     }
 
-    DFS(0);
-
+    DFS(2);
+    cout << "\n";
     cout << "DFS adjecency list : \n";
     for (int i = 0; i < n; i++)
         cout << i << " ->" << checked[i] << "\n";

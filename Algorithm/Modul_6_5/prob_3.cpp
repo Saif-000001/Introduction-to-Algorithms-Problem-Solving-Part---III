@@ -16,6 +16,7 @@ void BFS(int src)
     {
         int head = q.front();
         q.pop();
+        cout<<head<<" ";
 
         for (auto child : adj_list[head])
         {
@@ -50,8 +51,8 @@ int main()
     }
 
     cout<<"Cheaked List : \n";
-    BFS(0);
-
+    BFS(2);
+    cout<<"\n";
     for (int i = 0; i < n; i++)
     {
         cout << i << " -> " << checked[i] << "\n";
