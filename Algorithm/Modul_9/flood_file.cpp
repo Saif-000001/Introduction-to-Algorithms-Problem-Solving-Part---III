@@ -1,3 +1,18 @@
+// problem link - https://cses.fi/problemset/task/1192
+
+/*
+5 8
+########
+#..#...#
+####.#.#
+#..#...#
+########
+Output -> 3
+while there exists an empty cell
+    - find an empty unvisited cell
+    - run bfs() from that cell
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
