@@ -48,19 +48,40 @@ bool is_coordinate(pair<int, int> coord)
     return true;
 }
 
+// void dfs(pair<int, int> nodes)
+// {
+//     int x = nodes.first;
+//     int y = nodes.second;
+//     visited[x][y] = 1;
+
+//     for (int i = 0; i < 4; i++)
+//     {
+//         int new_x = x + dx[i];
+//         int new_y = y + dy[i];
+//         pair<int, int> adj_node = {new_x, new_y};
+//         if (is_coordinate(adj_node) && visited[new_x][new_y] == 0)
+//             dfs(adj_node);
+//     }
+// }
+
 void dfs(pair<int, int> nodes)
 {
+    stack<pair<int, int>> s;
     int x = nodes.first;
     int y = nodes.second;
     visited[x][y] = 1;
-
-    for (int i = 0; i < 4; i++)
+    s.push(nodes);
+    while (!s.empty())
     {
-        int new_x = x + dx[i];
-        int new_y = y + dy[i];
-        pair<int, int> adj_node = {new_x, new_y};
-        if (is_coordinate(adj_node) && visited[new_x][new_y] == 0)
-            dfs(adj_node);
+        s.pop();
+        for (int i = 0; i < 4; i++)
+        {
+            int new_x = x + dx[i];
+            int new_y = y + dy[i];
+            pair<int, int> adj_node = {new_x, new_y};
+            if (is_coordinate(adj_node) && visited[new_x][new_y] == 0)
+                dfs(adj_node);
+        }
     }
 }
 
