@@ -18,6 +18,7 @@ bool cycle_detection(int node)
         }
         else if (visited[adj_node] == true)
             return true;
+        
     }
     visited[node] = 2;
     return false;
