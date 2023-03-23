@@ -10,6 +10,10 @@ Input:
 Output:
 4
 2 1 3 2
+
+Time complexity -> O(V+E)
+Space complexity -> O(V)
+
 */
 
 #include <bits/stdc++.h>

@@ -11,6 +11,10 @@ Output -> 3
 while there exists an empty cell
     - find an empty unvisited cell
     - run bfs() from that cell
+
+
+Time complexity -> O(V*E)
+Space complexity -> O(V*E)
 */
 
 #include <bits/stdc++.h>

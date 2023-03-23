@@ -42,6 +42,9 @@ YES
 2. is the cell forbidden/wall?
 3. is the cell visited?
 
+Time complexity -> O(V*E)
+Space complexity -> O(V)
+
 */
 
 #include <bits/stdc++.h>
