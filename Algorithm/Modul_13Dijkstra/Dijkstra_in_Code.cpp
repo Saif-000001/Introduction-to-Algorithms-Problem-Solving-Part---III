@@ -1,6 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+/*
+6 8
+1 2 4
+1 3 4
+3 2 2
+2 4 3
+2 5 1
+2 6 6
+4 6 2
+5 6 3
+
+*/
+
 const int N = 1e5 + 5;
 const int INF = 1e9;
 
@@ -73,9 +87,8 @@ int main()
     dijkstra(src);
 
     for (int i = 1; i <= nodes; i++)
-    {
-        cout << d[i] << " ";
-    }
+        cout << "Node: " << i << " distant: " << d[i] << "\n";
+
     cout << "\n";
 
     return 0;
