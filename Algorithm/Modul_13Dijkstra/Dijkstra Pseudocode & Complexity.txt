@@ -1,0 +1,30 @@
+// input -> A weighted graph and source
+// output -> distance of all nodes from the source 
+
+
+/*
+
+u -> v
+
+if d[u] + c(u,v) < d[v]:
+   d[v] = d[u] + c(u,v)
+
+*/
+
+// Space complexity -> O(n) + O(n) + O(1) = O(n)
+// Time complexity -> O(n) + O(n^2) + O(m) = O(n^2) + O(n^2) = O(n^2)
+
+
+- create a distance array "d"  // O(n)
+- Initialize all values of "d" to infinity ---> O(n)
+- d[src] = 0
+- create a visited array and mark all nodes as unvisited  // O(n) ---> O(n)
+
+- for i = 0 to n - 1:  // O(1) ---> O(n)
+       - pick the "unvisited" node with minimum d[node] ---> O(n^2)
+       - visited[node] = 1 ---> O(1)
+       - for all adj_node of node :  --- > O(m) = O(n^2)
+         - if d[node] + c(node, adj_node) < d[adj_node]:
+               d[adj_node] = d[node] + c(node, adj_node)
+
+- output array "d"
