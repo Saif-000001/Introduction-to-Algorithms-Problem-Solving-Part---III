@@ -25,7 +25,7 @@ m = E
 - pq.push({0,src})
 
 - while the priyority_queue is not empty : -> O(E)
-       - head_distance , head = pq.front()
+       - head_distance , head = pq.top()
        - pq.pop() -> O(log E)
        - if visited[head]==1 : ignore
        - visited[head] = 1
