@@ -44,9 +44,9 @@ int main()
         adj_Matrix[v][u] = 1;
     }
     cout << "Adjecence Matrix : \n";
-    for (int i = 0; i < nodes; i++)
+    for (int i = 1; i <= nodes; i++)
     {
-        for (int j = 0; j < nodes; j++)
+        for (int j = 1; j <= nodes; j++)
         {
             cout << adj_Matrix[i][j] << " ";
         }

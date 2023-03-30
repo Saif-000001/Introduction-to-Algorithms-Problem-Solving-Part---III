@@ -58,10 +58,11 @@ int main()
         int u, v;
         cin >> u >> v;
         adj_list[u].push_back(v);
+        adj_list[v].push_back(u);
     }
 
     bool cycle_exists = false;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
         if (visited[i] == 0)
         {
