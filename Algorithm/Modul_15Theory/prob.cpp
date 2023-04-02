@@ -144,7 +144,8 @@ int main()
         cout << "NO\n";
         return 0;
     }
-get_path(safeCoord.first, safeCoord.second);
+
+    get_path(safeCoord.first, safeCoord.second);
 
     cout << "YES\n";
     cout << path.size() - 1 << "\n";
