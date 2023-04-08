@@ -42,3 +42,24 @@ O(n) + O(E log E) + O(E log E)
 -> O(|E| log |v^2|)
 -> O(2|E| log |V|) 
 -> O(|E| log |V|) [base 2]
+
+
+
+- create a distance array "d"  
+- Initialize all values of "d" to infinity 
+- d[src] = 0
+- create a visited array and mark all nodes as unvisited 
+- take an empty reverse priyority_queue "pq"
+- pq.push({0,src})
+
+- while the priyority_queue is not empty : 
+       - head_distance , head = pq.top()
+       - pq.pop() -> O(log E)
+       - if visited[head]==1 : ignore
+       - visited[head] = 1
+       - for all adj_node of head : 
+         - if d[head] + c(head, adj_node) < d[adj_node]:
+            - d[adj_node] = d[head] + c(head, adj_node)
+            - pq.push({d[adj_node], adj_node}); 
+
+- output array "d"
