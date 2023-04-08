@@ -23,12 +23,18 @@ d[u] + c(u,v) < d[v]
 - create distance array "d" with all values to infinity -> O(n) // -> O(n)
 - d[src] = 0 -> O(1)
 
+- negative_cycle = false 
+
 - for i = 1 to n-1: -> O(n) -> O(n*m)
    - for all edge e(u,v,w): -> O(m)
       - if d[u] + w < d[v]: -> O(1)
            d[v] = d[u] + w -> O(1)
+           - if i == n:
+             - negative_cycle = true
 
-print the distance array "d" -> O(n)
+
+- print whether negative cycle exists 
+- print the distance array "d" -> O(n)
 
 
 /*
