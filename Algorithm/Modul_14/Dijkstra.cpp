@@ -60,12 +60,12 @@ int main()
 
     dijkstra(src);
 
-    cout << Distance[n] << "\n";
+    // cout << Distance[n] << "\n";
 
-    for (int i = 1; i <= n; i++)
-    {
-        cout << "Node " << i << " Distance : " << Distance[i] << "\n";
-    }
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     cout << "Node " << i << " Distance : " << Distance[i] << "\n";
+    // }
 
     if (visited[n] == 0)
     {
