@@ -24,6 +24,5 @@ fun(n,a,b,c,.......){
         //  1. handle base case
 
         //  2. loop through the states 
-
-        //  3. and calculate the answer from smaller sub-problems
+               2.1. and calculate the answer from smaller sub-problems
     }
