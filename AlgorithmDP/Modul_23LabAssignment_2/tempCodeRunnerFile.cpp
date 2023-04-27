@@ -1,2 +1,1 @@
-else if (n <= 0)
-    //     return 0;
+ ans = max(ans, x);
