@@ -2,7 +2,7 @@
 using namespace std;
 const int N = 1e5 + 5;
 long long int dp[N], arr[N];
-long long int maxloot(long long int n)
+long long int max_coins(long long int n)
 {
     if (n == 0)
         return 0;
@@ -13,9 +13,11 @@ long long int maxloot(long long int n)
     if (dp[n] != -1)
         return dp[n];
 
-    long long int take = arr[n - 1] + maxloot(n - 2);
-    long long int leave = maxloot(n - 1);
-    return dp[n] = max(take, leave);
+    long long int take = arr[n - 1] + max_coins(n - 2);
+    long long int leave = max_coins(n - 1);
+    long long int ans = max(take, leave);
+    dp[n] = ans;
+    return ans;
 }
 int main()
 {
@@ -37,7 +39,7 @@ int main()
             cin >> arr[i];
         }
 
-        cout << "Case " << i << ": " << maxloot(n) << endl;
+        cout << "Case " << i << ": " << max_coins(n) << endl;
         i++;
     }
     return 0;

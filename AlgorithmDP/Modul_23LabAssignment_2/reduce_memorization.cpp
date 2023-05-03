@@ -14,10 +14,11 @@ int countways(int n)
 
     int ans = countways(n - 1) + 1;
 
-    if (n % 2 == 0)
-        ans = min(ans, countways(n / 2) + 1);
     if (n % 3 == 0)
         ans = min(ans, countways(n / 3) + 1);
+
+    if (n % 2 == 0)
+        ans = min(ans, countways(n / 2) + 1);
 
     dp[n] = ans;
     return ans;
