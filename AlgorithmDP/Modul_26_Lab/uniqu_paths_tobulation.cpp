@@ -29,8 +29,10 @@ int main()
             }
 
             int ans = 0;
-            ans += dp[i - 1][j];
-            ans += dp[i][j - 1];
+            if (i > 0)
+                ans += dp[i - 1][j];
+            if (j > 0)
+                ans += dp[i][j - 1];
             dp[i][j] = ans;
         }
     }
