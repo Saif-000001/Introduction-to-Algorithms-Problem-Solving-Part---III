@@ -83,7 +83,7 @@ int main()
         adj_list[v].push_back({u, w});
     }
 
-    int src = 1;
+    int src = 2;
     dijkstra(src);
 
     for (int i = 1; i <= nodes; i++)
@@ -97,7 +97,7 @@ int main()
 
 /*
 
-7 12
+8 12
 2 1 3
 2 3 18
 1 3 22

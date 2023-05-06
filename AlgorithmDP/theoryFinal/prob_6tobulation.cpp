@@ -1,12 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int INF = 1e9 + 7;
+const int MOD = 1e9 + 5;
 const int N = 1e3 + 5;
 int dp[N][N];
 
 int main()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
     int n;
     cin >> n;
 
@@ -21,7 +25,7 @@ int main()
                 dp[i][j] = 0;
             else
             {
-                dp[i][j] = (dp[i - 1][j] + dp[i][j - 1]) % INF;
+                dp[i][j] = (dp[i - 1][j] + dp[i][j - 1]) % MOD;
                 if (i == 1 && j == 1)
                     dp[i][j] = 1;
             }
