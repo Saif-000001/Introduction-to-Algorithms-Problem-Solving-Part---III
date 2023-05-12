@@ -10,8 +10,8 @@ using namespace std;
 int dx[4] = {1, 0, 0, -1};
 int dy[4] = {0, -1, 1, 0};
 
-vector<int> adj[1111];
-bool visited[1111][1111];
+vector<int> adj[1005];
+bool visited[1005][1005];
 
 bool isValid(int x, int y, int n, int m)
 {
@@ -20,7 +20,7 @@ bool isValid(int x, int y, int n, int m)
 
 ll DFS(int x, int y, int n, int m)
 {
-    ll count = adj[x][y];
+    ll max_count = adj[x][y];
     visited[x][y] = true;
     for (int i = 0; i < 4; i++)
     {
@@ -28,10 +28,10 @@ ll DFS(int x, int y, int n, int m)
         int ty = y + dy[i];
         if (isValid(tx, ty, n, m))
         {
-            count += DFS(tx, ty, n, m);
+            max_count += DFS(tx, ty, n, m);
         }
     }
-    return count;
+    return max_count;
 }
 
 int main()
