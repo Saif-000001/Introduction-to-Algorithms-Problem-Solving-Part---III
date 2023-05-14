@@ -1,5 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define Faster                        \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(0);                       \
+    cout.tie(0);
 
 const int N = 3000;
 string s, t;
@@ -28,6 +32,7 @@ int lcs(int i, int j)
 
 int main()
 {
+    Faster;
     cin >> s >> t;
     int n = s.length(), m = t.length();
     memset(dp, -1, sizeof(dp));
